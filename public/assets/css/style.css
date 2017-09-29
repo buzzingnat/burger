@@ -1,0 +1,94 @@
+body {
+	background: #eaefd3;
+	color: #211103;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #0e0909;
+}
+
+hr {
+	border-color: #c16200;
+	background: #c16200;
+}
+
+.burgersToEat {
+	padding: 10px 20px;
+	border-right: solid 1px #c16200;
+}
+
+.burgersEaten {
+	padding: 10px 40px;
+}
+
+li {
+	list-style-type: none;
+	display: flex; /* or inline-flex */
+	justify-content: space-between;
+}
+
+.inlineForm, .inlineText {
+	display: inline-block;
+}
+
+button.mainColor {
+	background: #c16200;
+	color: #0e0909;
+	font-weight: 800;
+} button:hover.mainColor {
+	font-weight: 400;
+	background: #881600;
+	color: #eaefd3;
+	border: solid 1px #c16200;
+} button:active.mainColor {
+	font-weight: 400;
+	background: #4e0110;
+	color: #eaefd3;
+}
+
+.headerImg {
+	background: url(https://cdn.unos.com/images/menus/sandwiches/sliders.jpg) center 50%;
+	opacity: 0.5;
+	background-size: cover;
+	margin-top: 0px;
+    color: #fff;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+	position: absolute;
+	top:0; left:0;
+	z-index:-1;
+}
+
+header {
+	height: 150px;
+}
+
+header h1, header h3 {
+	width: 80%;
+	margin: .25em auto;
+}
+
+@media screen and (max-width: 850px) {
+	h3 {
+		display: none;
+	}
+}
+
+.newBurgerForm form {
+	margin: .5em 0em;
+	margin-bottom: .5em;
+	padding: 1em;
+	background: #c16200;
+	border: solid 1px #4e0110;
+} input {
+	display: block;
+} .newBurgerForm button {
+	background: #eaefd3;
+	font-weight: 800;
+	position: relative;
+	width: 33%;
+	margin: .5em auto;
+	display: block;
+	margin-bottom: 0;
+}

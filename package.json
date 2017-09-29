@@ -1,0 +1,28 @@
+{
+  "name": "burger",
+  "version": "1.0.0",
+  "description": "A burger logger. Follows the MVC design pattern. Uses Node and MySQL to query and route data. Uses Handlebars to generate HTML. Has a custom ORM to connect the database with the model.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buzzingnat/burger.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/buzzingnat/burger/issues"
+  },
+  "homepage": "https://github.com/buzzingnat/burger#readme",
+  "dependencies": {
+    "body-parser": "1.18.2",
+    "express": "4.15.5",
+    "express-handlebars": "3.0.0",
+    "method-override": "2.3.9",
+    "mysql": "2.14.1"
+  }
+}

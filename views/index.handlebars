@@ -1,0 +1,52 @@
+<header class="row">
+<div class="col col-12">
+<div class="headerImg"></div>
+<h1 class="title">Eat All The Burgers</h1>
+<h3>Make a burger, eat a burger.</h3>
+</div>
+</div>
+</header>
+
+<hr>
+<div class="row align-center"><div class="col-10">
+<div class="row auto gutters">
+	<section class="burgersToEat col">
+	<h2>Delicious Burgers</h2>
+	<h3>...just waiting to be eaten</h3>
+	<ul>
+	  {{#each burgers}}
+	  {{#unless this.devoured}}
+	  	<li>
+	  	   <span class="inlineText">Burger: {{this.burger_name}}</span>
+	  	   	<form action="/{{this.id}}?_method=PUT" method="POST" class="inlineForm">
+	  	   		<button class="mainColor" type="submit">Devour me!</button>
+	  	   	</form>
+	  	</li>
+	  {{/unless}}
+	  {{/each}}
+	</ul>
+	</section>
+
+	<section class="burgersEaten col">
+	<h2>Devoured Burgers</h2>
+	<h3>...demolished by hungry appetites</h3>
+	<ul>
+	  {{#each burgers}}
+	  {{#if this.devoured}}
+	  	<li>
+	  	   <p>Burger: {{this.burger_name}}</p>
+	  	</li>
+	  {{/if}}
+	  {{/each}}
+	</ul>
+	</section>
+</div>
+<div class="row align-center">
+	<div class="col col-4 newBurgerForm">
+	<form action="/" method="POST">
+		<input type="text" name="burger_name" placeholder="Chicken Sriracha Veg">
+		<button class="mainColor" type="submit">Submit</button>
+	</form>
+	</div>
+</div>
+</div></div>
