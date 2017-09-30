@@ -21,7 +21,7 @@ hr {
 	padding: 10px 20px;
 	min-height: 130px;
 }
-
+ul {margin: 0 15px;}
 li {
 	list-style-type: none;
 	display: flex; /* or inline-flex */
@@ -31,11 +31,22 @@ li {
 .inlineForm, .inlineText {
 	display: inline-block;
 }
+.inlineText {
+	padding: .5em 0;
+}
+
+button.mainColor[disabled] {
+  opacity: 0.4;
+  cursor: default;
+  pointer-events: none;
+  background: #a19193;
+}
 
 button.mainColor {
 	background: #c16200;
 	color: #0e0909;
 	font-weight: 800;
+	width: 10em;
 } button:hover.mainColor {
 	font-weight: 400;
 	background: #881600;
@@ -49,6 +60,8 @@ button.mainColor {
 
 .sectionHeader {
 	position: relative;
+	height: 130px;
+	width: 100%;
 }
 
 .headerImg {
@@ -91,6 +104,13 @@ header h1, header h3 {
 	}
 }
 
+.color-focus {
+	color: #1c86f2;
+}
+.color-error {
+	color: #4e0110;
+}
+
 .newBurgerForm form {
 	margin: .5em 0em;
 	margin-bottom: .5em;
@@ -100,7 +120,7 @@ header h1, header h3 {
 } input {
 	display: block;
 } .newBurgerForm button {
-	background: #eaefd3;
+	background: #e19220;
 	font-weight: 800;
 	position: relative;
 	width: 33%;

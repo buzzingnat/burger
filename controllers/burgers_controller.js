@@ -20,6 +20,7 @@ router.get("/", function(request, response) {
 
 // create one new burger
 router.post("/", function(request, response) {
+    // check string length client side
     burger.insertOne([
         "burger_name", "devoured"
     ], [
@@ -34,8 +35,8 @@ router.put("/:id", function(request, response) {
     console.log(`trying to eat a burger...`);
     var condition = "id = " + request.params.id;
 
-    console.log("condition", condition);
-    console.log("devoured?", request.body.devoured);
+    // console.log("condition", condition);
+    // console.log("devoured?", request.body.devoured);
 
     burger.updateOne({
         devoured: request.body.devoured
