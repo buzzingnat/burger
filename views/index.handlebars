@@ -1,6 +1,6 @@
 <header class="row">
 <div class="col col-12">
-<div class="headerImg"></div>
+<div class="headerImg topImg"></div>
 <h1 class="title">Eat All The Burgers</h1>
 <h3>Make a burger, eat a burger.</h3>
 </div>
@@ -11,8 +11,11 @@
 <div class="row align-center"><div class="col-10">
 <div class="row auto gutters">
 	<section class="burgersToEat col">
-	<h2>Delicious Burgers</h2>
-	<h3>...just waiting to be eaten</h3>
+	<div class="sectionHeader">
+		<div class="headerImg burgerImg"></div>
+		<h2>Delicious Burgers</h2>
+		<h3>...just waiting to be eaten</h3>
+	</div>
 	<ul>
 	  {{#each burgers}}
 	  {{#unless this.devoured}}
@@ -28,8 +31,11 @@
 	</section>
 
 	<section class="burgersEaten col">
-	<h2>Devoured Burgers</h2>
-	<h3>...demolished by hungry appetites</h3>
+	<div class="sectionHeader">
+		<div class="headerImg eatenImg"></div>
+		<h2>Devoured Burgers</h2>
+		<h3>...demolished by hungry appetites</h3>
+	</div>
 	<ul>
 	  {{#each burgers}}
 	  {{#if this.devoured}}

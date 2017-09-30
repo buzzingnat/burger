@@ -14,11 +14,12 @@ hr {
 
 .burgersToEat {
 	padding: 10px 20px;
-	border-right: solid 1px #c16200;
+	min-height: 130px;
 }
 
 .burgersEaten {
-	padding: 10px 40px;
+	padding: 10px 20px;
+	min-height: 130px;
 }
 
 li {
@@ -46,10 +47,12 @@ button.mainColor {
 	color: #eaefd3;
 }
 
+.sectionHeader {
+	position: relative;
+}
+
 .headerImg {
-	background: url(https://cdn.unos.com/images/menus/sandwiches/sliders.jpg) center 50%;
 	opacity: 0.5;
-	background-size: cover;
 	margin-top: 0px;
     color: #fff;
     width: 100%;
@@ -58,6 +61,19 @@ button.mainColor {
 	position: absolute;
 	top:0; left:0;
 	z-index:-1;
+} .burgerImg {
+	background: url(/assets/img/burger.png) right center;
+	height: 120px;
+	background-size: contain;
+	background-repeat: no-repeat;
+} .topImg {
+	background: url(https://cdn.unos.com/images/menus/sandwiches/sliders.jpg) center;
+	background-size: cover;
+} .eatenImg {
+	background: url(/assets/img/burger-eat.gif) right center;
+	height: 120px;
+	background-size: contain;
+	background-repeat: no-repeat;
 }
 
 header {
