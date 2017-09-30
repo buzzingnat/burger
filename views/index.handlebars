@@ -8,6 +8,18 @@
 </header>
 
 <hr>
+
+<div class="row align-center">
+	<div class="col col-4 newBurgerForm">
+	<form action="/" method="POST">
+		<label for="burger_name">Make A New Burger</label>
+		<input type="text" name="burger_name" placeholder="Chicken Sriracha Veg">
+		<div class="desc">You have <span id="burgerNameHelp" class="color-focus">45</span> characters left.</div>
+		<button class="mainColor" type="submit">Submit</button>
+	</form>
+	</div>
+</div>
+
 <div class="row align-center"><div class="col-10">
 <div class="row auto gutters">
 	<section class="burgersToEat col">
@@ -16,6 +28,7 @@
 		<h2>Delicious Burgers</h2>
 		<h3>...just waiting to be eaten</h3>
 	</div>
+	<hr>
 	<ul>
 	  {{#each burgers}}
 	  {{#unless this.devoured}}
@@ -36,6 +49,7 @@
 		<h2>Devoured Burgers</h2>
 		<h3>...demolished by hungry appetites</h3>
 	</div>
+	<hr>
 	<ul>
 	  {{#each burgers}}
 	  {{#if this.devoured}}
@@ -46,15 +60,5 @@
 	  {{/each}}
 	</ul>
 	</section>
-</div>
-<div class="row align-center">
-	<div class="col col-4 newBurgerForm">
-	<form action="/" method="POST">
-		<label for="burger_name">Make A New Burger</label>
-		<input type="text" name="burger_name" placeholder="Chicken Sriracha Veg">
-		<div class="desc">You have <span id="burgerNameHelp" class="color-focus">45</span> characters left.</div>
-		<button class="mainColor" type="submit">Submit</button>
-	</form>
-	</div>
 </div>
 </div></div>
