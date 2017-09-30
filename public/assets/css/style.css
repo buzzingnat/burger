@@ -32,7 +32,8 @@ hr {
 	width: auto;
 	position: relative;
 	display: inline-block;
-	right: 5%;
+	right: -15%;
+	margin-top: .5em;
 }
 
 ul {margin: 0 15px;}
@@ -120,12 +121,16 @@ header h1, header h3 {
 	.row.gutters .centerBox.col {
 		display: block;
 		position: relative;
-		right: -92%;
+		right: -88%;
 		top: -60px;
 		z-index: -1;
 	}
 	.burgersToEat img, .burgersEaten img {
-		height: 55px;
+		margin-top: -5px;
+		width: 42px;
+		height: auto;
+		left: 0;
+		position: relative;
 	}
 }
 
