@@ -21,6 +21,20 @@ hr {
 	z-index: -1;
 }
 
+.centerBox {
+	position: relative;
+	width: 25%;
+	z-index: 2;
+}
+
+.burgersToEat img, .burgersEaten img {
+	height: 100px;
+	width: auto;
+	position: relative;
+	display: inline-block;
+	right: 5%;
+}
+
 ul {margin: 0 15px;}
 li {
 	list-style-type: none;
@@ -46,7 +60,7 @@ button.mainColor {
 	background: #c16200;
 	color: #0e0909;
 	font-weight: 800;
-	width: 10em;
+	width: 100%;
 } button:hover.mainColor {
 	font-weight: 400;
 	background: #881600;
@@ -74,19 +88,9 @@ button.mainColor {
 	position: absolute;
 	top:0; left:0;
 	z-index:-1;
-} .burgerImg {
-	background: url(/assets/img/burger.png) right center;
-	height: 120px;
-	background-size: contain;
-	background-repeat: no-repeat;
 } .topImg {
 	background: url(https://cdn.unos.com/images/menus/sandwiches/sliders.jpg) center;
 	background-size: cover;
-} .eatenImg {
-	background: url(/assets/img/burger-eat.gif) right center;
-	height: 120px;
-	background-size: contain;
-	background-repeat: no-repeat;
 }
 
 header {
@@ -103,8 +107,25 @@ header h1, header h3 {
 		display: none;
 	}
 	button.mainColor {
-		width: 6em;
-		padding: .1em;
+		width: 50%;
+		padding: .5em;
+		margin-left: 25%;
+	}
+}
+
+@media screen and (max-width: 765px) {
+	.sectionHeader {
+		height: 75px;
+	}
+	.row.gutters .centerBox.col {
+		display: block;
+		position: relative;
+		right: -92%;
+		top: -60px;
+		z-index: -1;
+	}
+	.burgersToEat img, .burgersEaten img {
+		height: 55px;
 	}
 }
 
@@ -139,4 +160,8 @@ footer {
 	padding-top: 1em;
 	background: #c16200;
 	color: #0e0909;
+}
+
+footer p {
+	text-align: center;
 }

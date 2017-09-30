@@ -20,21 +20,25 @@
 	</div>
 </div>
 
-<div class="row align-center"><div class="col-10">
+<div class="row align-center"><div class="col col-10">
 <div class="row auto gutters">
 	<section class="burgersToEat col">
-	<div class="sectionHeader">
-		<div class="headerImg burgerImg"></div>
-		<h2>Delicious Burgers</h2>
-		<h3>...just waiting to be eaten</h3>
+	<div class="sectionHeader row auto">
+		<div class="col col-8">
+			<h2>Delicious Burgers</h2>
+			<h3>...just waiting to be eaten</h3>
+		</div>
+		<div class="col col-4 centerBox">
+			<img src="/assets/img/burger.png" alt="burger" height="100">
+		</div>
 	</div>
 	<hr>
 	<ul>
 	  {{#each burgers}}
 	  {{#unless this.devoured}}
-	  	<li>
-	  	   <span class="inlineText">Burger: {{this.burger_name}}</span>
-	  	   	<form action="/{{this.id}}?_method=PUT" method="POST" class="inlineForm">
+	  	<li class="row">
+	  	   <span class="inlineText col col-8">Burger: {{this.burger_name}}</span>
+	  	   	<form action="/{{this.id}}?_method=PUT" method="POST" class="inlineForm col col-4">
 	  	   		<button class="mainColor" type="submit" name="devoured" value="true">Devour me!</button>
 	  	   	</form>
 	  	</li>
@@ -44,17 +48,21 @@
 	</section>
 
 	<section class="burgersEaten col">
-	<div class="sectionHeader">
-		<div class="headerImg eatenImg"></div>
-		<h2>Devoured Burgers</h2>
-		<h3>...demolished by hungry appetites</h3>
+	<div class="sectionHeader row">
+		<div class="col col-8">
+			<h2>Devoured Burgers</h2>
+			<h3>...demolished by hungry appetites</h3>
+		</div>
+		<div class="col col-4 centerBox">
+			<img src="/assets/img/burger-eat.gif" alt="eaten burger" height="100">
+		</div>
 	</div>
 	<hr>
 	<ul>
 	  {{#each burgers}}
 	  {{#if this.devoured}}
-	  	<li>
-	  	   <p>Burger: {{this.burger_name}}</p>
+	  	<li class="row">
+	  	   <p class="col-12">Burger: {{this.burger_name}}</p>
 	  	</li>
 	  {{/if}}
 	  {{/each}}
