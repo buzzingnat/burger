@@ -23,7 +23,7 @@ function watchInput() {
 			$('#burgerNameHelp').removeClass('color-focus');
 			$('#burgerNameHelp').addClass('color-error');
 		}
-		if (inputLength > 0 && inputLength < 45) {
+		if (inputLength > 0 && inputLength < 46) {
 			$('.newBurgerForm :input[type="submit"]').prop('disabled', false);
 			$('.newBurgerForm :input[type="submit"]').removeAttr("disabled");
 			return;
