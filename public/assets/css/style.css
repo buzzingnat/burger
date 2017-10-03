@@ -3,6 +3,10 @@ body {
 	color: #211103;
 }
 
+.row {
+	display: block;
+}
+
 h1, h2, h3, h4, h5, h6 {
 	color: #0e0909;
 }
@@ -25,6 +29,8 @@ hr {
 	position: relative;
 	width: 25%;
 	z-index: 2;
+	left: 75%;
+    top: -100px;
 }
 
 .burgersToEat img, .burgersEaten img {
@@ -39,12 +45,15 @@ hr {
 ul {margin: 0 15px;}
 li {
 	list-style-type: none;
-	display: flex; /* or inline-flex */
+	/*
+	display: flex;
 	justify-content: space-between;
+	*/
 }
 
 .inlineForm, .inlineText {
 	display: inline-block;
+	z-index: 15;
 }
 .inlineText {
 	padding: .5em 0;
